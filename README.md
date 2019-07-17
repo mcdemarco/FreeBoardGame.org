@@ -20,7 +20,7 @@ Download our [Android app here](https://play.google.com/store/apps/details?id=or
 - :heavy_check_mark: Cornerus (by [JosefKuchar](https://github.com/JosefKuchar), similar to Blokus)
 - :heavy_check_mark: TicTacToe.
 - :heavy_check_mark: Checkers
-- :heavy_check_mark: Magnate (by [Cristyn Magnus](http://decktet.wikidot.com/designer:cristyn-magnus), implemented by M.C.DeMarco)
+- :heavy_check_mark: Domains (similar to [Magnate](http://decktet.wikidot.com/game:magnate))
 
 Check the [game development kanban](https://github.com/freeboardgame/FreeBoardGame.org/projects/11)
 

@@ -109,7 +109,7 @@ export function selectDeck(G: IG, ctx: IGameCtx, id: number): any {
 }
 
 const GameConfig: IGameArgs = {
-  name: 'magnate',
+  name: 'domains',
   flow: {
     endTurn: false,
     endPhase: false,
@@ -217,8 +217,8 @@ const GameConfig: IGameArgs = {
   },
 };
 
-export const MagnateGame = Game(GameConfig);
-export const MagnateGameForTest = (override: any) =>
+export const DomainsGame = Game(GameConfig);
+export const DomainsGameForTest = (override: any) =>
   Game({
     ...GameConfig,
     ...override,

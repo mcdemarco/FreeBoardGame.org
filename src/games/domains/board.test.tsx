@@ -3,7 +3,7 @@ import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { Client } from '@freeboardgame.org/boardgame.io/client';
 import { Client as ReactClient } from '@freeboardgame.org/boardgame.io/react';
-import { MagnateGame, MagnateGameForTest } from './game';
+import { DomainsGame, DomainsGameForTest } from './game';
 import { MemoryRouter } from 'react-router';
 import { Board } from './board';
 import { GameMode } from '../../App/Game/GameModePicker';
@@ -27,7 +27,7 @@ const BoardTest = (props: any) => (
   </MemoryRouter>
 );
 
-const MagnateGameConstSeed = MagnateGameForTest({ seed: 0 });
+const DomainsGameConstSeed = DomainsGameForTest({ seed: 0 });
 // Decks are:
 // 2 35, 1 93, 2 95, 1 51
 
@@ -41,7 +41,7 @@ const MagnateGameConstSeed = MagnateGameForTest({ seed: 0 });
 
 test('select a card', () => {
   const App = ReactClient({
-    game: MagnateGameConstSeed,
+    game: DomainsGameConstSeed,
     debug: false,
     board: BoardTest,
   }) as any;
@@ -57,7 +57,7 @@ test('select a card', () => {
 
 test('second player', () => {
   const App = ReactClient({
-    game: MagnateGameConstSeed,
+    game: DomainsGameConstSeed,
     debug: false,
     board: BoardTest,
   }) as any;
@@ -81,7 +81,7 @@ test('second player', () => {
 
 test('win', () => {
   const client = Client({
-    game: MagnateGame,
+    game: DomainsGame,
   });
   const state0 = client.store.getState();
   (state0.ctx as IGameCtx).gameover = { winner: '0' };
@@ -93,7 +93,7 @@ test('win', () => {
         moves={client.moves}
         playerID={'0'}
         gameArgs={{
-          gameCode: 'magnate',
+          gameCode: 'domains',
           players,
           mode: GameMode.OnlineFriend,
         }}
@@ -110,7 +110,7 @@ test('win', () => {
 
 test('loss', () => {
   const client = Client({
-    game: MagnateGame,
+    game: DomainsGame,
   });
   const state0 = client.store.getState();
   (state0.ctx as IGameCtx).gameover = { winner: '1' };
@@ -122,7 +122,7 @@ test('loss', () => {
         moves={client.moves}
         playerID={'0'}
         gameArgs={{
-          gameCode: 'magnate',
+          gameCode: 'domains',
           players,
           mode: GameMode.OnlineFriend,
         }}
@@ -139,7 +139,7 @@ test('loss', () => {
 
 test('draw', () => {
   const client = Client({
-    game: MagnateGame,
+    game: DomainsGame,
   });
   const state0 = client.store.getState();
   (state0.ctx as IGameCtx).gameover = { draw: true };
@@ -151,7 +151,7 @@ test('draw', () => {
         moves={client.moves}
         playerID={'0'}
         gameArgs={{
-          gameCode: 'magnate',
+          gameCode: 'domains',
           players,
           mode: GameMode.OnlineFriend,
         }}

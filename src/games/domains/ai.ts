@@ -7,7 +7,7 @@ interface IPlayState {
   ctx: IGameCtx;
 }
 
-class MagnateBot {
+class DomainsBot {
   async play(state: IPlayState, playerID: string) {
     if (state.ctx.phase === 'CARD_SELECT') {
       const randomCard = Math.floor(state.G.players[playerID as any].cards.length * Math.random());
@@ -41,7 +41,7 @@ class MagnateBot {
 const config: IAIConfig = {
   bgioAI: () => {
     return {
-      bot: MagnateBot,
+      bot: DomainsBot,
     };
   },
 };

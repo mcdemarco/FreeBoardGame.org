@@ -1,10 +1,10 @@
 import AIConfig from './ai';
 import { Client } from '@freeboardgame.org/boardgame.io/client';
-import { IG, MagnateGameForTest } from './game';
+import { IG, DomainsGameForTest } from './game';
 
 function getClient() {
   return Client({
-    game: MagnateGameForTest({ seed: 0 }),
+    game: DomainsGameForTest({ seed: 0 }),
     ai: AIConfig.bgioAI('1'),
   });
 }

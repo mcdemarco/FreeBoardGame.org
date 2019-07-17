@@ -1,6 +1,6 @@
 import { INVALID_MOVE } from '@freeboardgame.org/boardgame.io/core';
 import { Client } from '@freeboardgame.org/boardgame.io/client';
-import { MagnateGame, IG, selectCard, selectDeck } from './game';
+import { DomainsGame, IG, selectCard, selectDeck } from './game';
 import Player from './player';
 import Card from './card';
 // https://github.com/nicolodavis/boardgame.io/blob/master/docs/testing.md
@@ -97,13 +97,13 @@ it('should add card to a deck', () => {
 
 it('should declare player 1 as the winner', () => {
   // set up a specific board scenario
-  const MagnateCustomScenario = {
-    ...MagnateGame,
+  const DomainsCustomScenario = {
+    ...DomainsGame,
     seed: 'test',
   };
 
   const spec = {
-    game: MagnateCustomScenario,
+    game: DomainsCustomScenario,
     multiplayer: { local: true },
   };
 

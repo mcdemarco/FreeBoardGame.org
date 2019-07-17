@@ -3,17 +3,16 @@ import { GameMode } from '../../App/Game/GameModePicker';
 import { IGameDef } from '../../games';
 import instructions from './instructions.md';
 
-export const magnateGameDef: IGameDef = {
-  code: 'magnate',
-  name: 'Magnate',
+export const domainsGameDef: IGameDef = {
+  code: 'domains',
+  name: 'Domains',
   imageURL: Thumbnail,
   modes: [{ mode: GameMode.AI }, { mode: GameMode.OnlineFriend }],
   minPlayers: 2,
   maxPlayers: 3,
-  description: 'A Decktet Game',
-  descriptionTag: `Play Magnate, a free online game for\
- the Decktet. You can play the AI, or another player\
- online!`,
+  description: 'Similar to Magnate',
+  descriptionTag: `Control more domains than your opponent\
+ by spending resources to distribute your ranks wisely.`,
   instructions: {
     videoId: 'jcK2lXxdVmM',
     text: instructions,
