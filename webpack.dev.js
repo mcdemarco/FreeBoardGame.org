@@ -13,7 +13,7 @@ module.exports = merge(common, {
     compress: true,
     disableHostCheck: true,
     host: '0.0.0.0',
-    port: 8010,
+    port: 8000,
     hot: true,
     writeToDisk: true,
     publicPath: '/',

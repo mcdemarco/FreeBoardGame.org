@@ -16,7 +16,7 @@ import App from './App/App';
 const ENABLE_BREADCRUMBS = process.env.ENABLE_BREADCRUMBS === 'yes';
 
 const HOST = '0.0.0.0';
-const PORT = Number(process.env.FBG_PORT) || 8010;
+const PORT = Number(process.env.FBG_PORT) || 8000;
 
 const RESTRICTIVE_ROBOTS_TXT = ['User-agent: *', 'Disallow: /', ''].join('\n');
 
