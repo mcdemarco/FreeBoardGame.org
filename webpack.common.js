@@ -3,7 +3,7 @@ var path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 8010;
 const { GenerateSW } = require('workbox-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
