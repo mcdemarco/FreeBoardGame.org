@@ -13,13 +13,14 @@ Download our [Android app here](https://play.google.com/store/apps/details?id=or
 ## Games
 
 - :heavy_check_mark: Chess.
-- :heavy_check_mark: TakeSix! (by [JosefKuchar](https://github.com/JosefKuchar), similar to 6 Nimt)
+- :heavy_check_mark: TakeSix! (by [JosefKuchar](https://github.com/JosefKuchar), similar to 6 Nimmt)
 - :heavy_check_mark: Nine Mens Morris (by [JosefKuchar](https://github.com/JosefKuchar))
 - :heavy_check_mark: Reversi (by [JosefKuchar](https://github.com/JosefKuchar), similar to Rollit and Othelo)
 - :heavy_check_mark: Seabattle (similar to Battleship).
 - :heavy_check_mark: Cornerus (by [JosefKuchar](https://github.com/JosefKuchar), similar to Blokus)
 - :heavy_check_mark: TicTacToe.
 - :heavy_check_mark: Checkers
+- :heavy_check_mark: Magnate (by [Cristyn Magnus](http://decktet.wikidot.com/designer:cristyn-magnus), implemented by M.C.DeMarco)
 
 Check the [game development kanban](https://github.com/freeboardgame/FreeBoardGame.org/projects/11)
 
