@@ -81,7 +81,7 @@ export function getScoreBoard(G: IG): IScore[] {
   return G.players
     .map((player, i) => ({
       playerID: i.toString(),
-      score: player.penaltyCards.reduce((acc, card) => acc + card.value, 0),
+      score: player.penaltyCards.reduce((acc, card) => acc + card.rank, 0),
     }))
     .sort((a, b) => a.score - b.score);
 }
@@ -171,17 +171,19 @@ const GameConfig: IGameArgs = {
     // Generate deck
     const deck = ctx.random.Shuffle(
       new Array(104).fill(0).map((_, i) => {
-        let value = 1;
+        let rank = 1;
         if ((i + 1) % 55 === 0) {
-          value = 7;
+          rank = 5;
         } else if ((i + 1) % 11 === 0) {
-          value = 5;
+          rank = 4;
         } else if ((i + 1) % 10 === 0) {
-          value = 3;
+          rank = 3;
         } else if ((i + 1) % 5 === 0) {
-          value = 2;
+          rank = 2;
+        } else if ((i + 1) % 3 === 0) {
+          rank = 0;
         }
-        return new Card(i + 1, value, null);
+        return new Card(i + 1, rank, null);
       }),
     );
 

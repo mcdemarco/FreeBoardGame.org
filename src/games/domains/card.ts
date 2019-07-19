@@ -1,11 +1,11 @@
 export default class Card {
   number: number;
-  value: number;
+  rank: number;
   owner: number;
 
-  constructor(num: number, value: number, owner: number) {
+  constructor(num: number, rank: number, owner: number) {
     this.number = num;
-    this.value = value;
+    this.rank = rank;
     this.owner = owner;
   }
 }

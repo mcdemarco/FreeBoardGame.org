@@ -95,7 +95,7 @@ it('should add card to a deck', () => {
   expect(G.decks[0]).toHaveLength(5);
 });
 
-it('should declare player 1 as the winner', () => {
+it('should declare player 0 as the winner', () => {
   // set up a specific board scenario
   const DomainsCustomScenario = {
     ...DomainsGame,
@@ -154,7 +154,7 @@ it('should declare player 1 as the winner', () => {
   p0.moves.selectDeck(2);
   p1.moves.selectDeck(1);
 
-  // player '1' should be declared the winner
+  // player '0' should be declared the winner
   const { ctx } = p0.getState();
-  expect(ctx.gameover).toEqual({ winner: '1' });
+  expect(ctx.gameover).toEqual({ winner: '0' });
 });

@@ -9,5 +9,5 @@ Enzyme.configure({ adapter: new Adapter() });
 test('Check color of Card', () => {
   const card = new Card(1, 2, 0);
   const component = Enzyme.mount(<CardComponent card={card} />);
-  expect(component.find('div').get(0).props.style.background).toEqual('#3498db');
+  expect(component.find('div').get(0).props.style.background).toEqual('#52a3e8');
 });

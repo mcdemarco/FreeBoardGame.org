@@ -22,8 +22,8 @@ class DomainsBot {
     const { card, lastCards } = getCards(G, playerID);
     if (card.number < lastCards[0].number) {
       return G.decks
-        .map((deck, i) => ({ value: deck.reduce((acc, card) => acc + card.value, 0), id: i }), 0)
-        .sort((a, b) => a.value - b.value)[0].id;
+        .map((deck, i) => ({ rank: deck.reduce((acc, card) => acc + card.rank, 0), id: i }), 0)
+        .sort((a, b) => a.rank - b.rank)[0].id;
     } else {
       return G.decks.findIndex((deck, i) => isAllowedDeck(G, i, playerID));
     }

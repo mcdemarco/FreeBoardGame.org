@@ -10,12 +10,13 @@ export interface ICardProps {
 
 export class CardComponent extends React.Component<ICardProps, {}> {
   render() {
-    const values: any = {
-      1: '#ffffff',
-      2: '#3498db',
-      3: '#f1c40f',
-      5: '#e74c3c',
-      7: '#8e44ad',
+    const ranks: any = {
+      0: '#b9bbbd',
+      1: '#e66b2f',
+      2: '#52a3e8',
+      3: '#c37132',
+      4: '#58ca33',
+      5: '#e3f940',
     };
 
     return (
@@ -23,18 +24,18 @@ export class CardComponent extends React.Component<ICardProps, {}> {
         onClick={this.props.click}
         className={css.Card}
         style={{
-          background: values[this.props.card.value],
+          background: ranks[this.props.card.rank],
         }}
       >
         <Typography
-          className="CardValue"
+          className="CardRank"
           style={{
             textAlign: 'center',
             lineHeight: '20px',
           }}
           variant="body2"
         >
-          {this.props.card.value}
+          {this.props.card.rank}
         </Typography>
         <Typography
           className="CardNumber"
